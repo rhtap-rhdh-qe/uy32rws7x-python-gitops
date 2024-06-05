@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: uy32rws7x-python-gitops
+  description: This is GitOps manifest for uy32rws7x-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: uy32rws7x-python
+    janus-idp.io/tekton: uy32rws7x-python 
+    backstage.io/kubernetes-id: uy32rws7x-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:uy32rws7x-python
